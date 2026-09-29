@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Feliz Cumpleaños, Mi Amor! 💖</title>
+    <title>¡Feliz Cumpleaños, Mi Amor! 🎂💖</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome icons -->
@@ -33,7 +33,7 @@
 
         /* Glassmorphism custom design */
         .glass-card {
-            background: rgba(255, 255, 255, 0.75);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.8);
@@ -48,22 +48,22 @@
         /* Heart animation */
         @keyframes pulse-slow {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
+            50% { transform: scale(1.04); }
         }
 
         .animate-pulse-slow {
             animation: pulse-slow 2.5s infinite ease-in-out;
         }
 
-        /* Interactive Envelope CSS */
+        /* Envelope CSS */
         .envelope-wrapper {
             perspective: 1000px;
         }
 
         .envelope {
             position: relative;
-            width: 300px;
-            height: 200px;
+            width: 310px;
+            height: 210px;
             background: #f472b6;
             border-bottom-left-radius: 12px;
             border-bottom-right-radius: 12px;
@@ -81,9 +81,9 @@
             position: absolute;
             top: 0;
             z-index: 3;
-            border-top: 110px solid #ec4899;
-            border-right: 150px solid transparent;
-            border-left: 150px solid transparent;
+            border-top: 115px solid #ec4899;
+            border-right: 155px solid transparent;
+            border-left: 155px solid transparent;
             transform-origin: top;
             transition: transform 0.6s ease 0.2s, z-index 0.2s;
         }
@@ -99,10 +99,10 @@
             left: 0;
             width: 0;
             height: 0;
-            border-left: 150px solid #f472b6;
-            border-right: 150px solid #f472b6;
-            border-bottom: 100px solid #db2777;
-            border-top: 100px solid transparent;
+            border-left: 155px solid #f472b6;
+            border-right: 155px solid #f472b6;
+            border-bottom: 105px solid #db2777;
+            border-top: 105px solid transparent;
             border-bottom-left-radius: 12px;
             border-bottom-right-radius: 12px;
             z-index: 2;
@@ -112,8 +112,8 @@
             position: absolute;
             bottom: 10px;
             left: 15px;
-            width: 270px;
-            height: 180px;
+            width: 280px;
+            height: 190px;
             background: #ffffff;
             border-radius: 8px;
             padding: 15px;
@@ -127,7 +127,21 @@
             transform: translateY(-110px);
             z-index: 4;
             height: auto;
-            max-height: 400px;
+            max-height: 420px;
+        }
+
+        /* Polaroid style photos */
+        .polaroid {
+            background: white;
+            padding: 12px 12px 18px 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+        }
+
+        .polaroid:hover {
+            transform: scale(1.05) rotate(0deg) !important;
+            box-shadow: 0 15px 30px rgba(236, 72, 153, 0.3);
+            z-index: 20;
         }
 
         /* Floating Hearts Canvas */
@@ -146,64 +160,64 @@
 
     <canvas id="hearts-canvas"></canvas>
 
-    <!-- Elemento de Audio Principal -->
+    <!-- Reproductor de Audio -->
     <audio id="miCancion" loop preload="auto">
         <source src="cancion.mp3" type="audio/mpeg">
-        Tu navegador no soporta el reproductor de audio.
     </audio>
 
     <header class="relative z-10 w-full px-6 py-4 flex justify-between items-center max-w-6xl mx-auto">
         <div class="flex items-center space-x-2">
-            <span class="text-3xl">🌸</span>
-            <span class="font-cursive text-2xl font-bold text-pink-600 tracking-wider">Un Día Especial</span>
+            <span class="text-3xl">🎂</span>
+            <span class="font-cursive text-2xl font-bold text-pink-600 tracking-wider">Un Día Inolvidable</span>
         </div>
         
-        <!-- Music Control Button -->
+        <!-- Botón de Música -->
         <button id="music-btn" class="glass-card px-4 py-2 rounded-full flex items-center space-x-2 text-pink-600 font-medium hover:bg-pink-100 transition shadow-md border border-pink-200 text-sm md:text-base">
             <i id="music-icon" class="fas fa-music text-pink-500"></i>
-            <span id="music-text">Reproducir Canción</span>
+            <span id="music-text">Canción de Cumpleaños</span>
         </button>
     </header>
 
-    <main class="relative z-10 flex-grow container mx-auto px-4 py-8 flex flex-col items-center max-w-4xl">
+    <main class="relative z-10 flex-grow container mx-auto px-4 py-8 flex flex-col items-center max-w-5xl">
         
-        <!-- Title Banner -->
+        <!-- ENCABEZADO PRINCIPAL DE CUMPLEAÑOS -->
         <div class="text-center mb-10 animate-pulse-slow">
             <span class="inline-block bg-pink-100 text-pink-700 text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest border border-pink-300 mb-3 shadow-sm">
-                ✨ ¡Hoy celebramos a la persona más especial! ✨
+                🎉 ¡Hoy el mundo celebra tu existencia! 🎉
             </span>
-            <h1 class="font-title text-5xl md:text-7xl lg:text-8xl text-pink-600 drop-shadow-md leading-tight">
-                ¡Feliz Cumpleaños, Mi Amor!
+            <h1 class="font-title text-6xl md:text-8xl lg:text-9xl text-pink-600 drop-shadow-md leading-tight">
+                ¡Feliz Cumpleaños!
             </h1>
-            <p class="font-cursive text-xl md:text-3xl text-pink-800 mt-2">
-                Gracias por llenar mi mundo de sonrisas, luz y amor. 💖
+            <p class="font-cursive text-2xl md:text-4xl text-pink-800 mt-2">
+                "Que este nuevo año te traiga tanta felicidad como la que tú me das todos los días." 🎂✨
             </p>
         </div>
 
-        <section class="w-full flex flex-col items-center my-8">
+        <!-- CARTA DE CUMPLEAÑOS INTERACTIVA -->
+        <section class="w-full flex flex-col items-center my-6">
             <h2 class="text-xl md:text-2xl font-semibold text-pink-700 mb-4 flex items-center gap-2">
-                <i class="fas fa-envelope-open-text text-pink-500"></i>
-                Haz clic en el sobre para abrir tu carta
+                <i class="fas fa-gift text-pink-500"></i>
+                Haz clic en la carta para abrir tu regalo especial
             </h2>
 
             <div class="envelope-wrapper my-6">
                 <div id="envelope" class="envelope flex justify-center items-center">
                     <div class="absolute z-10 text-white font-cursive text-xl flex flex-col items-center pointer-events-none" id="envelope-seal">
                         <i class="fas fa-heart text-3xl text-yellow-300 drop-shadow animate-bounce"></i>
-                        <span class="text-sm mt-1">Para ti 💌</span>
+                        <span class="text-sm mt-1">Para la cumpleañera 💌</span>
                     </div>
                     
                     <div id="letter" class="letter font-sans text-gray-700 flex flex-col justify-between">
                         <div class="overflow-y-auto max-h-72 p-2">
-                            <h3 class="text-2xl font-bold text-pink-600 mb-2">Mi niña hermosa,</h3>
+                            <h3 class="text-2xl font-bold text-pink-600 mb-2">¡Feliz día, mi princesa! 🎈</h3>
                             <p class="text-lg leading-relaxed mb-3">
-                                En este día tan mágico quiero recordarte lo increíblemente afortunado que soy de tenerte a mi lado. Tu sonrisa ilumina mis días y tu forma de ser hace que el mundo sea un lugar hermoso.
+                                En este día tan único e inolvidable, quiero recordarte lo increíblemente afortunado que soy de celebrar un año más a tu lado.
                             </p>
                             <p class="text-lg leading-relaxed mb-3">
-                                Deseo que este nuevo año de vida esté lleno de sueños cumplidos, muchas alegrías, risas interminables y que sigamos construyendo recuerdos hermosos juntos.
+                                Deseo de todo corazón que este nuevo ciclo de vida venga lleno de sueños cumplidos, risas infinitas, salud y muchísimos momentos felices. Gracias por iluminar mi vida con tu presencia.
                             </p>
                             <p class="text-lg leading-relaxed text-right font-bold text-pink-500">
-                                ¡Te amo con todo mi corazón! 💕
+                                ¡Que cumplas muchos años más! Te amo 💕
                             </p>
                         </div>
                     </div>
@@ -212,62 +226,120 @@
             </div>
         </section>
 
+        <!-- GALERÍA DE CUMPLEAÑOS -->
         <section class="w-full my-12">
-            <div class="text-center mb-8">
-                <h2 class="font-cursive text-3xl md:text-4xl text-pink-700 font-bold">Razones por las que te amo</h2>
-                <p class="text-sm text-pink-500">Haz clic en cada tarjeta para descubrir una sorpresa</p>
+            <div class="text-center mb-10">
+                <h2 class="font-cursive text-4xl text-pink-700 font-bold">Recuerdos y Deseos para Ti 📸</h2>
+                <p class="text-pink-600 text-sm md:text-base mt-1">Toca cada foto para descubrir un deseo de cumpleaños</p>
             </div>
 
+            <!-- Grilla Polaroid con fotos locales -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                
+                <!-- Foto 1 -->
+                <div class="polaroid rounded-lg transform -rotate-2 cursor-pointer" onclick="openModal(event, this, '¡Que nunca apagues esa sonrisa tan hermosa que te caracteriza! Feliz día.')">
+                    <div class="overflow-hidden rounded-md h-72 bg-pink-100">
+                        <img src="foto1.jpg" alt="Foto 1" class="w-full h-full object-cover">
+                    </div>
+                    
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="polaroid rounded-lg transform rotate-2 cursor-pointer" onclick="openModal(event, this, 'Deseo que este año logres todo aquello que tu corazón anhela.')">
+                    <div class="overflow-hidden rounded-md h-72 bg-pink-100">
+                        <img src="foto2.jpg" alt="Foto 2" class="w-full h-full object-cover">
+                    </div>
+                    
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="polaroid rounded-lg transform -rotate-1 cursor-pointer" onclick="openModal(event, this, 'Gracias por regalarnos a todos un año más de tu maravillosa forma de ser.')">
+                    <div class="overflow-hidden rounded-md h-72 bg-pink-100">
+                        <img src="foto3.jpg" alt="Foto 3" class="w-full h-full object-cover">
+                    </div>
+                    
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="polaroid rounded-lg transform rotate-3 cursor-pointer" onclick="openModal(event, this, 'Eres la cumpleañera más linda del universo entero.')">
+                    <div class="overflow-hidden rounded-md h-72 bg-pink-100">
+                        <img src="foto4.jpg" alt="Foto 4" class="w-full h-full object-cover">
+                    </div>
+                    
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="polaroid rounded-lg transform -rotate-3 cursor-pointer" onclick="openModal(event, this, 'Que este nuevo año esté lleno de paz, aventuras y muchísimo amor.')">
+                    <div class="overflow-hidden rounded-md h-72 bg-pink-100">
+                        <img src="foto5.jpg" alt="Foto 5" class="w-full h-full object-cover">
+                    </div>
+                    
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="polaroid rounded-lg transform rotate-1 cursor-pointer" onclick="openModal(event, this, 'Siempre estaré aquí para celebrar tu vida y acompañarte en tus alegrías.')">
+                    <div class="overflow-hidden rounded-md h-72 bg-pink-100">
+                        <img src="foto6.jpg" alt="Foto 6" class="w-full h-full object-cover">
+                    </div>
+                    
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TARJETAS CON DESEOS Y MOTIVOS -->
+        <section class="w-full my-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div onclick="revealReason(this)" class="glass-card p-6 rounded-2xl cursor-pointer transform hover:-translate-y-2 transition duration-300 border-2 border-pink-200 hover:border-pink-400 text-center relative overflow-hidden group">
-                    <div class="text-4xl text-pink-400 mb-3"><i class="fas fa-smile-beam"></i></div>
-                    <h3 class="font-bold text-lg text-pink-700 mb-2">Tu Sonrisa</h3>
-                    <p class="reason-text text-sm text-gray-600 hidden">Tiene el poder de cambiar completamente mi día y llenarme de una paz infinita.</p>
-                    <span class="tap-hint text-xs text-pink-400 font-medium">Toca para descubrir ✨</span>
+                <div class="glass-card p-6 rounded-2xl text-center shadow-md hover:scale-105 transition-all">
+                    <div class="text-3xl mb-2">🎂</div>
+                    <h3 class="font-cursive text-2xl font-bold text-pink-600 mb-2">Un Nuevo Año</h3>
+                    <p class="text-gray-600 text-sm">365 nuevos días para brillar, sonreír y seguir siendo la persona increíble que eres.</p>
                 </div>
 
-                <!-- Card 2 -->
-                <div onclick="revealReason(this)" class="glass-card p-6 rounded-2xl cursor-pointer transform hover:-translate-y-2 transition duration-300 border-2 border-pink-200 hover:border-pink-400 text-center relative overflow-hidden group">
-                    <div class="text-4xl text-pink-400 mb-3"><i class="fas fa-heart-pulse"></i></div>
-                    <h3 class="font-bold text-lg text-pink-700 mb-2">Tu Gran Corazón</h3>
-                    <p class="reason-text text-sm text-gray-600 hidden">La dulzura, empatía y bondad con la que tratas a todos te hace verdaderamente única.</p>
-                    <span class="tap-hint text-xs text-pink-400 font-medium">Toca para descubrir ✨</span>
+                <div class="glass-card p-6 rounded-2xl text-center shadow-md hover:scale-105 transition-all">
+                    <div class="text-3xl mb-2">🎈</div>
+                    <h3 class="font-cursive text-2xl font-bold text-pink-600 mb-2">Pide un Deseo</h3>
+                    <p class="text-gray-600 text-sm">Sopla las velas con fuerza, porque mereces que cada uno de tus anhelos se haga realidad.</p>
                 </div>
 
-                <!-- Card 3 -->
-                <div onclick="revealReason(this)" class="glass-card p-6 rounded-2xl cursor-pointer transform hover:-translate-y-2 transition duration-300 border-2 border-pink-200 hover:border-pink-400 text-center relative overflow-hidden group">
-                    <div class="text-4xl text-pink-400 mb-3"><i class="fas fa-sparkles"></i></div>
-                    <h3 class="font-bold text-lg text-pink-700 mb-2">Tu Magia</h3>
-                    <p class="reason-text text-sm text-gray-600 hidden">Cada momento simple a tu lado se convierte en un recuerdo inolvidable.</p>
-                    <span class="tap-hint text-xs text-pink-400 font-medium">Toca para descubrir ✨</span>
+                <div class="glass-card p-6 rounded-2xl text-center shadow-md hover:scale-105 transition-all">
+                    <div class="text-3xl mb-2">🎉</div>
+                    <h3 class="font-cursive text-2xl font-bold text-pink-600 mb-2">Tu Gran Día</h3>
+                    <p class="text-gray-600 text-sm">Hoy todo gira a tu alrededor. Disfruta, ríe y déjate consentir al máximo.</p>
                 </div>
             </div>
         </section>
 
+        <!-- BOTÓN FINAL DE CONFETI -->
         <section class="text-center my-10">
             <button id="celebrate-btn" class="bg-gradient-to-r from-pink-500 to-rose-400 text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-pink-300/50 hover:scale-105 active:scale-95 transition-all flex items-center space-x-3 mx-auto gold-border">
-                <i class="fas fa-gift text-2xl text-yellow-300"></i>
-                <span>¡Presiona para Celebrar! 🎉</span>
+                <i class="fas fa-cake-candles text-2xl text-yellow-300"></i>
+                <span>¡Soplar las Velas y Celebrar! 🎉</span>
             </button>
-            <p class="text-xs text-pink-600 mt-2">¡Haz estallar el amor y la celebración!</p>
         </section>
 
     </main>
 
+    <!-- MODAL PARA VER FOTO EN GRANDE CON MENSAJE -->
+    <div id="image-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm" onclick="closeModal()">
+        <div class="relative max-w-2xl w-full bg-white p-4 rounded-2xl shadow-2xl flex flex-col items-center" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute top-2 right-4 text-gray-500 hover:text-pink-600 text-3xl font-bold">&times;</button>
+            <img id="modal-img" src="" alt="Foto ampliada" class="max-h-[70vh] object-contain rounded-lg mb-4">
+            <p id="modal-caption" class="font-cursive text-2xl text-pink-600 text-center font-semibold px-4"></p>
+        </div>
+    </div>
+
     <footer class="relative z-10 text-center py-6 text-pink-700 text-sm font-medium">
-        <p>Hecho con todo mi amor especialmente para ti 💖</p>
-        <p class="text-xs text-pink-500 mt-1">¡Que este día sea tan hermoso como tú!</p>
+        <p>Con todo mi amor en tu cumpleaños 🎂💖</p>
     </footer>
 
     <script>
-        /* === Control de la Canción de Fondo === */
+        /* === Control de Música === */
         const cancion = document.getElementById('miCancion');
         const musicBtn = document.getElementById('music-btn');
         const musicIcon = document.getElementById('music-icon');
         const musicText = document.getElementById('music-text');
 
-        // Ajustar el volumen por defecto (50%)
         cancion.volume = 0.5;
 
         musicBtn.addEventListener('click', () => {
@@ -275,19 +347,30 @@
                 cancion.play().then(() => {
                     musicIcon.classList.remove('fa-music');
                     musicIcon.classList.add('fa-pause', 'text-pink-600');
-                    musicText.innerText = "Pausar Canción";
-                }).catch(error => {
-                    console.error("Error al reproducir el archivo de audio:", error);
-                });
+                    musicText.innerText = "Pausar Música";
+                }).catch(err => console.log(err));
             } else {
                 cancion.pause();
                 musicIcon.classList.remove('fa-pause');
                 musicIcon.classList.add('fa-music');
-                musicText.innerText = "Reproducir Canción";
+                musicText.innerText = "Canción de Cumpleaños";
             }
         });
 
-        /* === Floating Hearts Canvas Animation === */
+        /* === Modal de Fotos === */
+        function openModal(event, element, phrase) {
+            if (event) event.stopPropagation();
+            const img = element.querySelector('img');
+            document.getElementById('modal-img').src = img.src;
+            document.getElementById('modal-caption').innerText = phrase;
+            document.getElementById('image-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('image-modal').classList.add('hidden');
+        }
+
+        /* === Canvas Corazones Flotantes === */
         const canvas = document.getElementById('hearts-canvas');
         const ctx = canvas.getContext('2d');
 
@@ -329,18 +412,8 @@
                 ctx.beginPath();
                 const topCurveHeight = this.size * 0.3;
                 ctx.moveTo(0, topCurveHeight);
-                // Top left curve
-                ctx.bezierCurveTo(
-                    -this.size / 2, -topCurveHeight,
-                    -this.size, this.size / 3,
-                    0, this.size
-                );
-                // Top right curve
-                ctx.bezierCurveTo(
-                    this.size, this.size / 3,
-                    this.size / 2, -topCurveHeight,
-                    0, topCurveHeight
-                );
+                ctx.bezierCurveTo(-this.size / 2, -topCurveHeight, -this.size, this.size / 3, 0, this.size);
+                ctx.bezierCurveTo(this.size, this.size / 3, this.size / 2, -topCurveHeight, 0, topCurveHeight);
                 ctx.closePath();
                 ctx.fill();
                 ctx.restore();
@@ -360,9 +433,10 @@
 
         window.onload = function() {
             animateHearts();
+            triggerConfetti();
         };
 
-        /* === Envelope Interactive Logic === */
+        /* === Sobre e Interacciones === */
         const envelope = document.getElementById('envelope');
         const seal = document.getElementById('envelope-seal');
         let isOpen = false;
@@ -374,7 +448,6 @@
                 seal.style.display = 'none';
                 triggerConfetti();
 
-                // Intentar reproducir la canción al abrir el sobre si no está sonando
                 if (cancion.paused) {
                     musicBtn.click();
                 }
@@ -386,56 +459,25 @@
             }
         });
 
-        /* === Reason Card Click Reveal === */
-        function revealReason(card) {
-            const text = card.querySelector('.reason-text');
-            const hint = card.querySelector('.tap-hint');
-
-            if (text.classList.contains('hidden')) {
-                text.classList.remove('hidden');
-                hint.classList.add('hidden');
-                card.classList.add('bg-pink-50');
-            } else {
-                text.classList.add('hidden');
-                hint.classList.remove('hidden');
-                card.classList.remove('bg-pink-50');
-            }
-        }
-
-        /* === Celebration Confetti Effects === */
         const celebrateBtn = document.getElementById('celebrate-btn');
         celebrateBtn.addEventListener('click', () => {
             triggerConfetti();
         });
 
         function triggerConfetti() {
-            // Heart-shaped confetti
             confetti({
-                particleCount: 70,
-                spread: 80,
+                particleCount: 100,
+                spread: 100,
                 origin: { y: 0.6 },
-                colors: ['#f472b6', '#ec4899', '#f6d365', '#ffffff'],
-                shapes: ['circle']
+                colors: ['#f472b6', '#ec4899', '#f6d365', '#60a5fa', '#34d399']
             });
 
-            // Burst left
             setTimeout(() => {
-                confetti({
-                    particleCount: 40,
-                    angle: 60,
-                    spread: 55,
-                    origin: { x: 0 }
-                });
+                confetti({ particleCount: 50, angle: 60, spread: 60, origin: { x: 0 } });
             }, 250);
 
-            // Burst right
             setTimeout(() => {
-                confetti({
-                    particleCount: 40,
-                    angle: 120,
-                    spread: 55,
-                    origin: { x: 1 }
-                });
+                confetti({ particleCount: 50, angle: 120, spread: 60, origin: { x: 1 } });
             }, 400);
         }
     </script>
